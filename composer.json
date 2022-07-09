@@ -1,0 +1,155 @@
+{
+    "name": "bastienkopka/drupal-docker-base",
+    "description": "Drupal docker template",
+    "license": "GPL-2.0-or-later",
+    "type": "project",
+    "homepage": "https://github.com/bastienkopka/drupal-docker-base",
+    "require": {
+        "composer/installers": "2.1.1",
+        "cweagans/composer-patches": "1.7.2",
+        "drupal-composer/drupal-paranoia": "1.1.1",
+        "drupal/admin_toolbar": "3.1.0",
+        "drupal/core-composer-scaffold": "9.4.1",
+        "drupal/core-project-message": "9.4.1",
+        "drupal/core-recommended": "9.4.1",
+        "drupal/gin": "3.0.0-beta5",
+        "drupal/paragraphs": "1.14.0",
+        "drupal/redis": "1.5.0",
+        "drush/drush": "11.0.9",
+        "oomphinc/composer-installers-extender": "2.0.1",
+        "vlucas/phpdotenv": "5.4.1"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "0.7.2",
+        "drupal/coder": "8.3.15",
+        "drupal/core-dev": "9.4.1",
+        "ergebnis/composer-normalize": "2.28.1",
+        "mglaman/phpstan-drupal": "1.1.20",
+        "palantirnet/drupal-rector": "0.12.4",
+        "phpmd/phpmd": "2.12.0",
+        "phpro/grumphp": "*",
+        "phpspec/prophecy-phpunit": "2.0.1"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": [
+            "load.environment.php"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "drupal-composer/drupal-paranoia": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "composer/installers": true,
+            "oomphinc/composer-installers-extender": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpro/grumphp": true,
+            "ergebnis/composer-normalize": true
+        },
+        "discard-changes": true,
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "drupal-paranoia": {
+            "app-dir": "app",
+            "excludes": [
+                "core/install.php"
+            ],
+            "web-dir": "www"
+        },
+        "drupal-scaffold": {
+            "file-mapping": {
+                "[project-root]/.gitattributes": false,
+                "[web-root]/.csslintrc": false,
+                "[web-root]/.eslintrc.json": false,
+                "[web-root]/INSTALL.txt": false,
+                "[web-root]/README.md": false,
+                "[web-root]/example.gitignore": false,
+                "[web-root]/modules/README.txt": false,
+                "[web-root]/profiles/README.txt": false,
+                "[web-root]/sites/README.txt": false,
+                "[web-root]/themes/README.txt": false,
+                "[web-root]/update.php": false,
+                "[web-root]/web.config": false
+            },
+            "gitignore": false,
+            "locations": {
+                "web-root": "./app"
+            }
+        },
+        "grumphp": {
+            "config-default-path": "scripts/quality/grumphp/grumphp.yml"
+        },
+        "installer-paths": {
+            "app/core": [
+                "type:drupal-core"
+            ],
+            "app/libraries/{$name}": [
+                "type:drupal-library",
+                "type:npm-asset"
+            ],
+            "app/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "app/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "app/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "app/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "app/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "app/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "installer-types": [
+            "npm-asset"
+        ]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    }
+}

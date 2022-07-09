@@ -1,0 +1,34 @@
+/www
+/vendor
+
+# Core and contrib files.
+/app/core
+/app/libraries
+/app/modules/contrib
+/app/themes/contrib
+/app/translations/contrib
+
+/app/autoload.php
+/app/index.php
+/app/.htaccess
+/app/robots.txt
+
+/app/sites/default/default.services.yml
+/app/sites/default/default.settings.php
+/app/sites/development.services.yml
+/app/sites/example.settings.local.php
+/app/sites/example.sites.php
+/app/sites/*/files
+
+# Dev files.
+/app/.eslintignore
+/app/.ht.router.php
+/.editorconfig
+
+# Docker files.
+/.env
+/docker-compose.yml
+
+# Config files.
+/docker/mysql
+/conf/assets/node_modules/
