@@ -26,6 +26,8 @@ grumphp:
         - test
         - theme
         - yml
+      ignore_patterns:
+        - conf/drupal
     phpstan:
       configuration: scripts/quality/phpstan/phpstan.neon
       memory_limit: "-1"
