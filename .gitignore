@@ -32,3 +32,5 @@
 # Config files.
 /docker/mysql
 /conf/assets/node_modules/
+
+/.vscode/
