@@ -1,0 +1,12 @@
+name: Origin
+description: Theme for my portfolio
+core_version_requirement: ^8 || ^9
+type: theme
+package: Custom
+base theme: false
+regions:
+  header: 'Header'
+  aside: 'Aside'
+  content: 'Content'
+  footer: 'Footer'
+  sub_footer: 'Sub footer'
