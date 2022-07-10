@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const themeName = 'your_theme_name';
+const themeName = 'origin';
 const themePath = '../../app/themes/custom/' + themeName;
 
 const config = {

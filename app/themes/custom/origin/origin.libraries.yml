@@ -1,0 +1,8 @@
+origin-style:
+  css:
+    theme:
+      dist/css/main.min.css: {}
+
+origin-js:
+  js:
+    dist/js/main.min.js: {}

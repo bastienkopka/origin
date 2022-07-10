@@ -10,3 +10,6 @@ regions:
   content: 'Content'
   footer: 'Footer'
   sub_footer: 'Sub footer'
+libraries:
+ - origin/origin-style
+ - origin/origin-js

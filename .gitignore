@@ -21,6 +21,7 @@
 /app/sites/*/files
 
 # Dev files.
+/app/themes/custom/origin/dist/
 /app/.eslintignore
 /app/.ht.router.php
 /.editorconfig
