@@ -3,7 +3,7 @@ description: Theme for my portfolio
 core_version_requirement: ^8 || ^9
 type: theme
 package: Custom
-base theme: false
+base theme: classy
 regions:
   header: 'Header'
   aside: 'Aside'

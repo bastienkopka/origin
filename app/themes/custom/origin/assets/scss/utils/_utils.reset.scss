@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+body {
+  font-size: var(--font-size-default);
+  color: var(--color-blue-dark);
+  background-color: var(--color-white-bg);
+}
+
+main {
+  position: relative;
+}
+
+.dialog-off-canvas-main-canvas {
+  p, ol, ul, li,
+  blockquote, figure,
+  fieldset, legend,
+  textarea, pre,
+  iframe, hr,
+  h1, h2, h3,
+  h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    &, &::before, &::after {
+      box-sizing: inherit;
+    }
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  iframe {
+    border: 0;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  td, th {
+    padding: 0;
+  }
+}
