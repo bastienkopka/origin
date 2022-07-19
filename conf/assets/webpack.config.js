@@ -29,22 +29,11 @@ const config = {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [
+          'url-loader',
           MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
           'postcss-loader'
-        ]
-      },
-      {
-        test: /\.(eot|ttf|woff|woff2|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts'
-            }
-          }
         ]
       },
       {
