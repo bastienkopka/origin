@@ -1,0 +1,20 @@
+@mixin font-face($font-family, $font-file, $font-weight) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: normal;
+    src: url($font-file + '-webfont.eot');
+    src: url($font-file + '-webfont.eot?#iefix') format('embedded-opentype'),
+      url($font-file + '-webfont.woff') format('woff'),
+      url($font-file + '-webfont.woff2') format('woff2'),
+      url($font-file + '-webfont.ttf') format('truetype'),
+      url($font-file + '-webfont.svg#') format('svg');
+  }
+}
+
+@include font-face('Sarabun', '../fonts/sarabun/sarabun-light/sarabun-light', 300);
+@include font-face('Sarabun', '../fonts/sarabun/sarabun-regular/sarabun-regular', 400);
+@include font-face('Open Sans', '../fonts/opensans/opensans-light/opensans-light', 300);
+@include font-face('Open Sans', '../fonts/opensans/opensans-regular/opensans-regular', 400);
+@include font-face('Open Sans', '../fonts/opensans/opensans-semibold/opensans-semibold', 600);
+@include font-face('Open Sans', '../fonts/opensans/opensans-bold/opensans-bold', 700);
