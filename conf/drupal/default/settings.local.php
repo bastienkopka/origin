@@ -69,4 +69,17 @@ $settings['cache']['default'] = $_ENV['SITE_CACHE_DEFAULT'];
 // Load services definition file.
 $settings['container_yamls'][] = $app_root . '/modules/contrib/redis/exemple.services.yml';
 $settings['container_yamls'][] = $app_root . '/modules/contrib/redis/redis.services.yml';
-$settings['container_yamls'][] = $app_root . '/../conf/drupal/default/services.yml';
+// $settings['container_yamls'][] = $app_root . '/../conf/drupal/default/services.yml';
+$settings['container_yamls'][] = $app_root . '/../conf/drupal/default/development.services.yml';
+
+
+// Dev.
+$settings['rebuild_access'] = TRUE;
+$config['devel.settings']['devel_dumper'] = 'var_dumper';
+$config['system.logging']['error_level'] = 'verbose';
+$config['system.performance']['css']['preprocess'] = FALSE;
+$config['system.performance']['js']['preprocess'] = FALSE;
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+$settings['cache']['bins']['page'] = 'cache.backend.null';
+$settings['cache']['bins']['render'] = 'cache.backend.null';
+

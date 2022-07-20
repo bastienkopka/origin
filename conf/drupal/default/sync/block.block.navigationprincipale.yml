@@ -1,0 +1,28 @@
+uuid: a2686bf6-0a0d-4e7a-b6a2-e304e928fae0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - origin
+third_party_settings:
+  block_class:
+    classes: null
+id: navigationprincipale
+theme: origin
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navigation principale'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,13 +1,13 @@
-uuid: 9d68ed8b-a212-4006-a838-c493a7e679a0
-langcode: en
-status: true
+uuid: 08b0e136-92f8-4d9e-ac72-e9d41e499ad4
+langcode: fr
+status: false
 dependencies:
   module:
     - system
   theme:
     - origin
 _core:
-  default_config_hash: NjcxOBrPOiK5-38t56DwFBDVY4yer7YSlbRWXFuHe7A
+  default_config_hash: y9X3xgCsO59pQyzNLzY1D3SDJJxCHILLWkpPnmuTJ2E
 id: origin_breadcrumbs
 theme: origin
 region: content

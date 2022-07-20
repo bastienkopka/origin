@@ -1,13 +1,13 @@
-uuid: 98c94189-2c84-4509-b2f8-feb22ff4c10a
-langcode: en
-status: true
+uuid: 4892b365-8595-46cd-93fc-9a0efcb81db0
+langcode: fr
+status: false
 dependencies:
   module:
     - system
   theme:
     - origin
 _core:
-  default_config_hash: '-Ac3ISpIT0PQ-whzD7_dw0SdKi6dAbRFNWdSjOiVDqg'
+  default_config_hash: WvPhI8OwllG0gE69-F8qL3ai3nd5SbYD6JpmEuZcyok
 id: origin_messages
 theme: origin
 region: content

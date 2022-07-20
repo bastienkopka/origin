@@ -1,5 +1,5 @@
-uuid: 1074d514-9c10-4a5b-878c-3a81d76a31e1
-langcode: en
+uuid: c92fc7e8-7c0f-4ae1-8d6f-a3f60a389be7
+langcode: fr
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
   theme:
     - origin
 _core:
-  default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
+  default_config_hash: hBHXB7hC05XU7pDYzETt-GUcpFlogK1gkjyAsg0Ym58
 id: origin_content
 theme: origin
 region: content

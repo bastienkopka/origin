@@ -3,6 +3,7 @@ _core:
 langcode: fr
 module:
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   automated_cron: 0
   big_pipe: 0
@@ -59,5 +60,7 @@ module:
 theme:
   claro: 0
   gin: 0
+  stable: 0
+  classy: 0
   origin: 0
 profile: standard
