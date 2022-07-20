@@ -6,3 +6,6 @@ origin-style:
 origin-js:
   js:
     dist/js/main.min.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

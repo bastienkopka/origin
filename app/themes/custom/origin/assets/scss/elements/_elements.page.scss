@@ -1,0 +1,13 @@
+.container {
+  margin: 0 auto;
+
+  @include min-breakpoint('lg') {
+    max-width: 960px;
+  }
+  @include min-breakpoint('xl') {
+    max-width: 1140px;
+  }
+  @include min-breakpoint('xxl') {
+    max-width: 1320px;
+  }
+}
